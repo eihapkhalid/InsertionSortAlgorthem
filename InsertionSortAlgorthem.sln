@@ -5,6 +5,10 @@ VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSortAlgorthem", "InsertionSortAlgorthem\InsertionSortAlgorthem.csproj", "{D3ACE6A9-3206-4D64-BBF4-BF73BAB5751C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSortAlgorthem.Models", "InsertionSortAlgorthem.Models\InsertionSortAlgorthem.Models.csproj", "{50B7E13D-26BC-4DDB-AE3A-7BE1128B1D1E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InsertionSortAlgorthem.DataAccess", "InsertionSortAlgorthem.DataAccess\InsertionSortAlgorthem.DataAccess.csproj", "{4C86C9B5-669C-4AE5-9E86-90BFAAD9F72C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{D3ACE6A9-3206-4D64-BBF4-BF73BAB5751C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3ACE6A9-3206-4D64-BBF4-BF73BAB5751C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3ACE6A9-3206-4D64-BBF4-BF73BAB5751C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{50B7E13D-26BC-4DDB-AE3A-7BE1128B1D1E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{50B7E13D-26BC-4DDB-AE3A-7BE1128B1D1E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{50B7E13D-26BC-4DDB-AE3A-7BE1128B1D1E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{50B7E13D-26BC-4DDB-AE3A-7BE1128B1D1E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C86C9B5-669C-4AE5-9E86-90BFAAD9F72C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C86C9B5-669C-4AE5-9E86-90BFAAD9F72C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C86C9B5-669C-4AE5-9E86-90BFAAD9F72C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C86C9B5-669C-4AE5-9E86-90BFAAD9F72C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
