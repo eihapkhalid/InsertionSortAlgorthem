@@ -12,21 +12,19 @@ namespace InsertionSortAlgorthem.Controllers
     {
         #region Inject
         private readonly IUnitOfWork _unitOfWork;
-        private InsertionSortingService _insertionSortingService;
-
-        public EmployeeController(IUnitOfWork unitOfWork, InsertionSortingService insertionSortingService)
+        public EmployeeController(IUnitOfWork unitOfWork)
         {
             _unitOfWork = unitOfWork;
-            _insertionSortingService = insertionSortingService;
         }
         #endregion
 
+        #region Post Creat Employee
         [HttpPost("PostEmployee")]
         public IActionResult PostEmployee([FromBody] TbEmbloyee model)
         {
             try
             {
-                var foundEmployee = _unitOfWork.TbEmbloyeeRepository.Get(e=>e.EmbloyeeId == model.EmbloyeeId);
+                var foundEmployee = _unitOfWork.TbEmbloyeeRepository.Get(e => e.EmbloyeeId == model.EmbloyeeId);
                 if (foundEmployee != null)
                 {
                     #region Update
@@ -48,13 +46,25 @@ namespace InsertionSortAlgorthem.Controllers
                     #endregion
                 }
 
-                return Ok(model); // إرجاع النموذج بالبيانات المحدثة أو الجديدة
+                #region Ok
+                return Ok(model); // إرجاع النموذج بالبيانات المحدثة أو الجديدة 
+                #endregion
             }
             catch (Exception ex)
             {
+                #region error
                 // التعامل مع الاستثناءات
                 return StatusCode(StatusCodes.Status500InternalServerError, ex.Message);
+                #endregion
             }
+        }
+        #endregion
+
+        [HttpGet("GetAllEmployee")]
+        public IActionResult GetAllEmployee()
+        {
+            var ListEmployee = _unitOfWork.TbEmbloyeeRepository.GetAll();
+            return Ok(ListEmployee); // تحويل القائمة إلى OkObjectResult
         }
 
     }
