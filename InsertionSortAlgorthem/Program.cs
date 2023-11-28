@@ -1,6 +1,7 @@
 
 using InsertionSortAlgorthem.DataAccess.Data;
 using InsertionSortAlgorthem.DataAccess.UnitOfWork;
+using InsertionSortAlgorthem.Utilities;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -56,6 +57,10 @@ namespace InsertionSortAlgorthem
 
             #region UnitOfWork
             builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
+            #endregion
+
+            #region InsertionSortingService
+            builder.Services.AddScoped<InsertionSortingService>();
             #endregion
 
             var app = builder.Build();

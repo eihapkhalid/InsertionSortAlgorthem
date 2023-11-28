@@ -18,7 +18,7 @@ namespace InsertionSortAlgorthem.Models
 
         [Required(ErrorMessage = "يجب إدخال العمر")]
         [Range(18, 65, ErrorMessage = "يجب أن يكون العمر بين 18 و 65 سنة")]
-        public int Age { get; set; }
+        public int EmbloyeeAge { get; set; }
 
         [Required(ErrorMessage = "يجب إدخال الراتب")]
         [Range(1000, 100000, ErrorMessage = "يجب أن يكون الراتب بين 1000 و 100000")]
